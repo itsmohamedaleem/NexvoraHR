@@ -647,9 +647,9 @@ ul {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
-  max-width: 900px;
+  max-width: var(--container-max);
   margin: 0 auto;
 }
 
@@ -1411,11 +1411,7 @@ ul {
     font-size: clamp(2.2rem, 5vw, 3.2rem);
   }
 
-  .services-row-top {
-    max-width: 100%;
-  }
-
-  .services-row-bottom {
+  .services-grid {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -1565,15 +1561,8 @@ ul {
     font-size: 0.9rem;
   }
 
-  /* Services */
-  .services-row-top {
+  .services-grid {
     grid-template-columns: 1fr;
-    max-width: 100%;
-  }
-
-  .services-row-bottom {
-    grid-template-columns: 1fr;
-    max-width: 100%;
   }
 
   .service-card {
