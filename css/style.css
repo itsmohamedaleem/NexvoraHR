@@ -647,7 +647,7 @@ ul {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   max-width: var(--container-max);
   margin: 0 auto;
@@ -1412,67 +1412,6 @@ ul {
   line-height: 1.75;
 }
 
-/* === Detailed Service List (11 Services) === */
-.service-list-section {
-  background: var(--white);
-  padding: 4rem 0 var(--section-padding);
-}
-
-.service-list-header {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.service-list-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
-  max-width: var(--container-max);
-  margin: 0 auto;
-}
-
-.service-list-item {
-  background: var(--off-white);
-  border: 1px solid var(--gray);
-  border-radius: var(--radius);
-  padding: 1.25rem 1.5rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  transition: var(--transition);
-}
-
-.service-list-item:hover {
-  border-color: var(--gold);
-  background: var(--white);
-  transform: translateX(5px);
-  box-shadow: var(--shadow-sm);
-}
-
-.service-list-icon {
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-  background: rgba(200, 149, 48, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.service-list-icon svg {
-  width: 16px;
-  height: 16px;
-  stroke: var(--gold);
-  fill: none;
-  stroke-width: 2.5;
-}
-
-.service-list-item span {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--navy);
-}
 
 /* === Why Choose Nexvora Section === */
 .why-choose {
@@ -1564,20 +1503,14 @@ ul {
     grid-template-columns: 1fr;
   }
   
-  .service-list-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
+
   .why-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
-  .service-list-grid {
-    grid-template-columns: 1fr;
-  }
-  
+
   .why-grid {
     grid-template-columns: 1fr;
     max-width: 450px;
