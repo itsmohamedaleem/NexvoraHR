@@ -1331,6 +1331,264 @@ ul {
   color: rgba(255,255,255,0.35);
 }
 
+/* === Vision & Mission Section === */
+.about-us {
+  background: var(--white);
+  padding: var(--section-padding) 0;
+  border-bottom: 1px solid var(--gray);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.about-card {
+  background: var(--off-white);
+  border: 1px solid var(--gray);
+  border-radius: var(--radius-lg);
+  padding: 3rem 2.5rem;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--gold);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(200, 149, 48, 0.2);
+  box-shadow: var(--shadow-card-hover);
+  background: var(--white);
+}
+
+.about-card:hover::before {
+  opacity: 1;
+}
+
+.about-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: rgba(200, 149, 48, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.about-icon svg {
+  width: 26px;
+  height: 26px;
+  stroke: var(--gold);
+  fill: none;
+  stroke-width: 2;
+}
+
+.about-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 1rem;
+}
+
+.about-card p {
+  font-size: 0.95rem;
+  color: var(--text-body);
+  line-height: 1.75;
+}
+
+/* === Detailed Service List (11 Services) === */
+.service-list-section {
+  background: var(--white);
+  padding: 4rem 0 var(--section-padding);
+}
+
+.service-list-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.service-list-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.service-list-item {
+  background: var(--off-white);
+  border: 1px solid var(--gray);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: var(--transition);
+}
+
+.service-list-item:hover {
+  border-color: var(--gold);
+  background: var(--white);
+  transform: translateX(5px);
+  box-shadow: var(--shadow-sm);
+}
+
+.service-list-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(200, 149, 48, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.service-list-icon svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--gold);
+  fill: none;
+  stroke-width: 2.5;
+}
+
+.service-list-item span {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+/* === Why Choose Nexvora Section === */
+.why-choose {
+  background: var(--navy-dark);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.why-choose::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at 50% 50%, rgba(200, 149, 48, 0.03) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.why-choose .section-title {
+  color: var(--white);
+}
+
+.why-choose .section-subtitle {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.why-card {
+  background: var(--navy-medium);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-lg);
+  padding: 2.2rem 1.8rem;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.why-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--gold);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.why-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: rgba(200, 149, 48, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.why-icon-box svg {
+  width: 22px;
+  height: 22px;
+  stroke: var(--gold);
+  fill: none;
+  stroke-width: 2;
+}
+
+.why-card h3 {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.6rem;
+}
+
+.why-card p {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.6;
+}
+
+/* --- Responsive Additions --- */
+@media (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .service-list-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .service-list-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .why-grid {
+    grid-template-columns: 1fr;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+  
+  .about-card {
+    padding: 2.2rem 1.8rem;
+  }
+}
+
 /* === Scroll Animations === */
 .fade-up {
   opacity: 0;
